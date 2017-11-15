@@ -1,6 +1,8 @@
 FROM jupyterhub/singleuser:latest
 
-RUN pip install numpy scipy matplotlib ipywidgets scikit-learn
+RUN apt-get update && apt-get install -y libgl1-mesa-glx
+
+RUN pip install numpy scipy matplotlib pandas ipywidgets scikit-learn
 RUN pip install nbgrader
 
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension

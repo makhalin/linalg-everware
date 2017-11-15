@@ -14,4 +14,5 @@ RUN jupyter nbextension disable --sys-prefix formgrader/main --section=tree
 RUN jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader
 
 USER root
+
 RUN apt-get update && apt-get install -y libgl1-mesa-glx

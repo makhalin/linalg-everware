@@ -1,4 +1,4 @@
-FROM jupyterhub/singleuser:0.7.2
+FROM jupyterhub/singleuser:0.9
 
 RUN pip install numpy scipy matplotlib ipywidgets scikit-learn
 RUN pip install nbgrader
